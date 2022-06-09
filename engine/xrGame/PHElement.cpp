@@ -11,7 +11,7 @@
 //#include "../Include/xrRender/Kinematics.h"
 #include "../Include/xrRender/Kinematics.h"
 #include "../Include/xrRender/KinematicsAnimated.h"
-#include "../3rd party/ode/ode/src/util.h"
+#include "../3rd party/ode/Ode/util.h"
 #ifdef DEBUG
 #	include "PHDebug.h"
 #	include "objectdump.h"
@@ -21,7 +21,7 @@
 #pragma warning(disable:4995)
 #pragma warning(disable:4267)
 
-#include "../3rd party/ode/ode/src/collision_kernel.h"
+#include "../3rd party/ode/Ode/collision_kernel.h"
 
 
 #pragma warning(default:4267)
@@ -1644,9 +1644,9 @@ static void dBodyGetPointForce (dBodyID b, dReal px, dReal py, dReal pz,
 {
   VERIFY (b);
   dVector3 p;
-  p[0] = px - b->pos[0];
-  p[1] = py - b->pos[1];
-  p[2] = pz - b->pos[2];
+  p[0] = px - b->posr.pos[0];
+  p[1] = py - b->posr.pos[1];
+  p[2] = pz - b->posr.pos[2];
   p[3] = 0;
   result[0] = b->facc[0];
   result[1] = b->facc[1];
