@@ -313,12 +313,14 @@ extern "C" {
 int  _dSafeNormalize3 (dVector3 a);
 int  _dSafeNormalize4 (dVector4 a);
 	
-static __inline void _dNormalize3(dVector3 a)
+__forceinline void _dNormalize3(dVector3 a)
 {
     dReal	sqr_magnitude = a[0] * a[0] + a[1] * a[1] + a[2] * a[2];
     dReal	epsilon = 1.192092896e-05F;
-    if (sqr_magnitude < epsilon)	_dSafeNormalize3(a);
-    else {
+    if (sqr_magnitude < epsilon)
+        _dSafeNormalize3(a);
+    else 
+    {
         dReal	l = dRecipSqrt(sqr_magnitude);
         a[0] *= l;
         a[1] *= l;
@@ -326,11 +328,20 @@ static __inline void _dNormalize3(dVector3 a)
     }
 }
 
-static __inline void _dNormalize4(dVector4 a)
+__forceinline void _dNormalize4(dVector4 a)
 {
-	/*int bNormalizationResult = */ _dSafeNormalize4(a);
-	//dIASSERT(bNormalizationResult);
-	//dVARIABLEUSED(bNormalizationResult);
+    dReal	sqr_magnitude = a[0] * a[0] + a[1] * a[1] + a[2] * a[2] + a[3] * a[3];
+    dReal	epsilon = 1.192092896e-05F;
+    if (sqr_magnitude < epsilon)
+        _dSafeNormalize4(a);
+    else
+    {
+        dReal	l = dRecipSqrt(sqr_magnitude);
+        a[0] *= l;
+        a[1] *= l;
+        a[2] *= l;
+        a[3] *= l;
+    }
 }
 
 #endif // defined(__ODE__)

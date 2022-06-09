@@ -51,6 +51,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrCPU_Pipe", "xrCPU_Pipe\xrCPU_Pipe.vcxproj", "{CA0649DD-D089-423A-981C-46B57A884EB9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrGame", "xrGame\xrGame.vcxproj", "{200652A6-043E-4634-8837-87983B3BD5E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB58439B-1F16-4E81-B0B3-1E1E95AD4901} = {EB58439B-1F16-4E81-B0B3-1E1E95AD4901}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrGameSpy", "xrGameSpy\xrGameSpy.vcxproj", "{5535F6B4-7AE6-4B66-8AEA-CC31C14D7AB7}"
 EndProject
