@@ -82,6 +82,8 @@ CPHWorld::CPHWorld()
 	b_processing=false;
 	m_gravity	=default_world_gravity;
 	b_exist=false;
+
+	dInitODE();
 }
 void CPHWorld::SetStep(dReal s)
 {
