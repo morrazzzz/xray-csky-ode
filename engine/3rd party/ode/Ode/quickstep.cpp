@@ -775,10 +775,32 @@ void dxQuickStepper (dxWorld *world, dxBody * const *body, int nb,
 		// they should not be used again.
 
 		// add stepsize * cforce to the body velocity
-		for (i=0; i<nb; i++) {
-			for (j=0; j<3; j++) body[i]->lvel[j] += stepsize * cforce[i*6+j];
-			for (j=0; j<3; j++) body[i]->avel[j] += stepsize * cforce[i*6+3+j];
-                }
+		bool bvalid = true;
+		for (i = 0; i < nb; i++)
+			for (j = 0; j < 3; j++)
+			{
+
+				float& lf = cforce[i * 6 + j];
+				float& af = cforce[i * 6 + 3 + j];
+				if (!dValid(lf))
+				{
+					lf = 0.f;
+					bvalid = false;
+				}
+				if (!dValid(af))
+				{
+					af = 0.f;
+					bvalid = false;
+				}
+				body[i]->lvel[j] += stepsize * lf; //valid?
+				body[i]->avel[j] += stepsize * af;//valid?
+			}
+		if (!bvalid)
+		{
+			for (i = 0; i < nj; i++) {
+				for (j = 0; j < 6; j++)joint[i]->lambda[j] = 0.f;
+			}
+		}
 
 
 		if (mfb > 0) {
