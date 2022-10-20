@@ -1,6 +1,6 @@
 #ifndef __XR_STREAM_SOUND_H__
 #define __XR_STREAM_SOUND_H__
-
+#include <dsound.h>
 #include <msacm.h>
 
 // refs

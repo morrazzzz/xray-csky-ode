@@ -247,6 +247,9 @@
     <Filter Include="OpenAutomate">
       <UniqueIdentifier>{0f74edef-6f9b-4a9d-98bd-deb41b5b6b80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SoundCore">
+      <UniqueIdentifier>{e59257df-43b2-447a-9c5f-8bed5dcc72f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_d3d_extensions.h">
@@ -630,6 +633,60 @@
     <ClInclude Include="xrSASH.h">
       <Filter>OpenAutomate</Filter>
     </ClInclude>
+    <ClInclude Include="Sound\SoundRender_Emitter.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_Environment.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_Source.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_Target.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_TargetA.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_TargetD.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\xr_cda.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\xr_streamsnd.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\cl_intersect.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\MusicStream.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\OpenALDeviceList.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\Sound.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_main.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_Cache.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_Core.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_CoreA.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundRender_CoreD.h">
+      <Filter>SoundCore</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="defines.cpp">
@@ -997,6 +1054,75 @@
     </ClCompile>
     <ClCompile Include="xrSASH.cpp">
       <Filter>OpenAutomate</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Emitter_FSM.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Emitter_StartStop.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Emitter_streamer.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Environment.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Source.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Source_loader.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Target.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_TargetA.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_TargetD.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\xr_cda.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\xr_streamsnd.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\guids.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\MusicStream.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\OpenALDeviceList.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\sound.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Cache.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Core.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Core_Processor.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Core_SourceManager.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Core_StartStop.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_CoreA.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_CoreD.cpp">
+      <Filter>SoundCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundRender_Emitter.cpp">
+      <Filter>SoundCore</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

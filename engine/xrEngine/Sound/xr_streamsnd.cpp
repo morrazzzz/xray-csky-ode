@@ -265,7 +265,7 @@ void CSoundStream::LoadADPCM( )
 	sxr_hdr			hdr;
 
 	string256		fn;
-	strconcat		(fn,fName,".ogg");
+	strconcat		(sizeof(fn), fn, fName,".ogg");
 
 	DataPos			= NULL;
 
@@ -304,6 +304,8 @@ void CSoundStream::LoadADPCM( )
     WaveDest		= (unsigned char *)xr_malloc(dwDestBufSize);
 	// wave source -- alloc on Play
 
+#if 0
     // DSound----------------------------------------------------------------
-	ADPCMCreateSoundBuffer	(SoundRender.pDevice, &pBuffer, pwfx);
+	ADPCMCreateSoundBuffer	(SoundRender->pDevice, &pBuffer, pwfx);
+#endif
 }

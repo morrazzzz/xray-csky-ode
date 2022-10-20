@@ -1043,7 +1043,7 @@ void CApplication::destroy_loading_shaders()
 
 //u32 calc_progress_color(u32, u32, int, int);
 
-PROTECT_API void CApplication::LoadDraw		()
+void CApplication::LoadDraw		()
 {
 	if(g_appLoaded)				return;
 	Device.dwFrame				+= 1;

@@ -1,12 +1,7 @@
-#ifndef SoundH
-#define SoundH
 #pragma once
+#include "sound_main.h"
 
-#ifdef XRSOUND_EXPORTS
-	#define XRSOUND_API __declspec(dllexport)
-#else
-	#define XRSOUND_API __declspec(dllimport)
-#endif
+#define XRSOUND_API ENGINE_API
 
 #ifdef __BORLANDC__
 	#define XRSOUND_EDITOR_API XRSOUND_API
@@ -319,6 +314,3 @@ IC void	ref_sound::set_params					( CSound_params* p )
         _feedback()->set_volume   	(p->volume);
     }
 }
-
-
-#endif

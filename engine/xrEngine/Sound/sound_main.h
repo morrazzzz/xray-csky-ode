@@ -2,11 +2,7 @@
 // or project specific include files that are used frequently, but
 // are changed infrequently
 //
-#ifndef stdafxH
-#define stdafxH
 #pragma once
-
-#include "../xrCore/xrCore.h"
 
 // mmsystem.h
 #define MMNOSOUND
@@ -27,16 +23,9 @@
 #include <vorbis/codec.h>
 #include <vorbis/vorbisfile.h>
 
-#include "../xrCDB/xrCDB.h"
-#include "sound.h"
-
-#define ENGINE_API
-
-#include "../xrcore/xr_resource.h"
+#include "../../xrcore/xr_resource.h"
 
 #ifdef _EDITOR    
 # 	include "ETools.h"
 #endif
 // TODO: reference additional headers your program requires here
-#endif
-
